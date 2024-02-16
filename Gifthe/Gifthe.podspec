@@ -1,14 +1,15 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'Gifthe'
     spec.version                  = '1.0'
-    spec.homepage                 = 'Link to the Shared Module homepage'
-    spec.source                   = { :http=> ''}
-    spec.authors                  = ''
-    spec.license                  = ''
+    spec.homepage                 = 'Gifthe KMM'
+    spec.source                   = { :git => "https://github.com/aryasurya21/Giftthe", :tag => "#{spec.version}" }
+    spec.authors                  = "Arya"
+    spec.license                  = { :type => "MIT", :file => "LICENSE" }
     spec.summary                  = 'Some description for the Shared Module'
     spec.vendored_frameworks      = 'build/cocoapods/framework/Gifthe.framework'
+    spec.source_files             = 'Gifthe/**/*.{kt}'
     spec.libraries                = 'c++'
-    spec.ios.deployment_target = '16.0'
+    spec.ios.deployment_target = '13.0'
                 
                 
     if !Dir.exist?('build/cocoapods/framework/Gifthe.framework') || Dir.empty?('build/cocoapods/framework/Gifthe.framework')
