@@ -9,8 +9,6 @@ Pod::Spec.new do |spec|
     spec.libraries                = 'c++'
     spec.source_files              = 'Gifthe/**/*.{kt}'
     spec.ios.deployment_target = '13.0'
-    spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-    spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
                 
                 
     if !Dir.exist?('build/cocoapods/framework/Gifthe.framework') || Dir.empty?('build/cocoapods/framework/Gifthe.framework')
