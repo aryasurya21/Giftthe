@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'Gifthe'
-    spec.version                  = '1.0.2'
+    spec.version                  = '1.0.4'
     spec.homepage                 = 'https://github.com/aryasurya21/Giftthe.git'
     spec.source                   = { :git => "https://github.com/aryasurya21/Giftthe.git", :tag => "#{spec.version}" }
     spec.authors                  = { "Arya" => "arya.surya021@gmail.com" }
@@ -9,8 +9,15 @@ Pod::Spec.new do |spec|
     spec.libraries                = 'c++'
     spec.source_files              = 'Gifthe/**/*.{kt}'
     spec.ios.deployment_target = '13.0'
-                
-                
+    spec.pod_target_xcconfig = {
+        'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64 armv7 arm64',
+        'VALID_ARCHS' => 'x86_64 armv7 arm64',
+    }
+    spec.user_target_xcconfig = {
+        'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64 armv7 arm64',
+        'VALID_ARCHS' => 'x86_64 armv7 arm64',
+    }
+
     if !Dir.exist?('build/cocoapods/framework/Gifthe.framework') || Dir.empty?('build/cocoapods/framework/Gifthe.framework')
         raise "
 
