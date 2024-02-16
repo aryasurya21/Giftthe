@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
     spec.summary                  = 'Some description for the Shared Module'
     spec.vendored_frameworks      = 'build/cocoapods/framework/Gifthe.framework'
     spec.libraries                = 'c++'
-    Spec.source_fies              = 'Gifthe/**/*.{kt}'
+    spec.source_files              = 'Gifthe/**/*.{kt}'
     spec.ios.deployment_target = '13.0'
                 
                 
